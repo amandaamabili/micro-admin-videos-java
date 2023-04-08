@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+
+}
+group 'com.fullcycle.admin.catalogo.infraestructure'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    implementation 'org.openpnp:opencv:3.4.2-0'
+
+
+    implementation project(path: ':application')
+    implementation project(path: ':domain')
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
