@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.fullcycle.admin.catalogo.domain.category.CategoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-09T17:56:26" hostname="BR0C02F74F0MD6M" time="0.021">
+<testsuite name="com.fullcycle.admin.catalogo.domain.category.CategoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-09T22:06:02" hostname="BR0C02F74F0MD6M" time="0.027">
   <properties/>
-  <testcase name="givenAValidParams_whenCallNewCategory_thenInstantiateCategory()" classname="com.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.021"/>
+  <testcase name="givenInvalidParams_whenCallNewCategoryAndValidate_thenShouldReceiveError()" classname="com.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.027"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

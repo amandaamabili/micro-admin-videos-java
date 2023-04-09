@@ -1,9 +1,12 @@
 package com.fullcycle.admin.catalogo.domain.category;
 
 import com.fullcycle.admin.catalogo.domain.AgregateRoot;
+import com.fullcycle.admin.catalogo.domain.validation.ValidationHandler;
 
 import java.time.Instant;
 import java.util.UUID;
+
+//TODO Convertido Categoria em uma classe agregada usando o DDD
 
 public class Category extends AgregateRoot<CategoryID> {
 
@@ -79,5 +82,14 @@ public class Category extends AgregateRoot<CategoryID> {
                 now,
                 now,
                 null);
+    }
+
+    @Override
+    public void validate(final ValidationHandler handler) {
+
+        //todo a validação da categoria, a categoria sabe se validar chamando o validador,
+        // o validador sabe se validar chamando o handler e o handler sabe se validar chamando o validador
+
+        new CategoryValidator(this, handler).validate();
     }
 }

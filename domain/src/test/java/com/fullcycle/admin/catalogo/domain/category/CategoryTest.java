@@ -1,6 +1,8 @@
 package com.fullcycle.admin.catalogo.domain.category;
 
 import com.fullcycle.admin.catalogo.domain.category.Category;
+import com.fullcycle.admin.catalogo.domain.exceptions.DomainException;
+import com.fullcycle.admin.catalogo.domain.validation.handler.ThrowsValidationHandler;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -24,6 +26,28 @@ public class CategoryTest {
         Assertions.assertNull(actualcategory.getDeletedAt());
 
 
+
+
+    }
+    @Test
+    public void givenInvalidParams_whenCallNewCategoryAndValidate_thenShouldReceiveError() {
+
+        final var expectedName = " ";
+        final var expectedDescription = "Category description";
+        final boolean expectedIsActive = true;
+        final var expectedErrorMessage = "'name'should nobe null";
+        final var expectedErrorCount = 1;
+
+        final  var actualcategory =
+                Category.newCategory(expectedName, expectedDescription, expectedIsActive);
+
+        final var actualException =
+                Assertions.assertThrows(DomainException.class, () ->  actualcategory.validate(new ThrowsValidationHandler()));
+            //todo DDD As entidades sabem se validar
+
+
+        Assertions.assertEquals(expectedErrorCount, actualException.getErrors().size());
+        Assertions.assertEquals(expectedErrorMessage, actualException.getErrors().get(0).getMessage());
 
 
     }
