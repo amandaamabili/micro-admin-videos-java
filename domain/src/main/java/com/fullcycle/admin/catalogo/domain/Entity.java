@@ -1,5 +1,8 @@
 package com.fullcycle.admin.catalogo.domain;
 
+import com.fullcycle.admin.catalogo.domain.validation.ValidationHandler;
+
+import javax.xml.validation.ValidatorHandler;
 import java.util.Objects;
 
 public class Entity<ID extends Identifier> {
@@ -27,5 +30,9 @@ public class Entity<ID extends Identifier> {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
+    }
+
+    public  void validate(ValidationHandler handler) {
+        //todo DDD As entidades sabem se validar
     }
 }

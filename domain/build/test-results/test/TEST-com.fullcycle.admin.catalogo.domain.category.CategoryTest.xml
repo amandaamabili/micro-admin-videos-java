@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.fullcycle.admin.catalogo.domain.category.CategoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-08T17:03:32" hostname="BR0C02F74F0MD6M" time="0.019">
+<testsuite name="com.fullcycle.admin.catalogo.domain.category.CategoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-09T22:47:51" hostname="BR0C02F74F0MD6M" time="0.017">
   <properties/>
-  <testcase name="givenAValidParams_whenCallNewCategory_thenInstantiateCategory()" classname="com.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.019"/>
+  <testcase name="givenAValidFalseIsActive_whenCallNewCategoryAndValidate_thenShouldReceiveOK()" classname="com.fullcycle.admin.catalogo.domain.category.CategoryTest" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
