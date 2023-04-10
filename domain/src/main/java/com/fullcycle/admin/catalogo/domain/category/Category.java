@@ -74,6 +74,7 @@ public class Category extends AgregateRoot<CategoryID> {
     {
         final var id = CategoryID.unique();
         final var now = Instant.now();
+        final var deletedAt = aIsActive ? null : now;
         return new Category(
                 id,
                 aName,
@@ -81,7 +82,7 @@ public class Category extends AgregateRoot<CategoryID> {
                 aIsActive,
                 now,
                 now,
-                null);
+                deletedAt);
     }
 
     @Override
